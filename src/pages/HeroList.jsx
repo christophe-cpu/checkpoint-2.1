@@ -13,13 +13,18 @@ function HeroList() {
         .then((data)=>setHeroes(data))
     }, [])
 
+    const handelete =(name)=> {setHeroes(heroes.filter(heroe=>heroe.name !== name))
+    }
+
     return (
         <div className="HeroList"> 
             {heroes.map ((heroe)=> 
                 <div key={heroe.id}>
-                    <HeroCard heroe={heroe} />
+                    <HeroCard heroe={heroe}  deleteHeroe={handelete} />
+                    
+
                 </div>  
-            )}             
+            )}            
         </div>
     )
 }
