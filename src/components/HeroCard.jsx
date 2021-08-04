@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import'./HeroCard.css';
 
-function HeroCard() {
+function HeroCard({heroe}) {
     return (
-        <div>
+        <div className="HeroCard">
+            <Link to ={{pathname: `/$ heroe.id`}} >
+                <h2>{heroe.name}</h2>
+            </Link>
+            <img className="heroe-picture" src={heroe.image} alt="heroe.name" />
             
         </div>
     )
