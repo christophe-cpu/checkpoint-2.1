@@ -9,6 +9,8 @@ function HeroCard({heroe, deleteHeroe}) {
                 <h2>{heroe.name}</h2>
             </Link>
             <img className="image" src={heroe.image} alt="heroe.name" />
+            <span>{heroe.stamina}</span>
+            <span>{}</span>
             <button onClick = {()=> deleteHeroe(heroe.name)}>
                 Delete Heroe
             </button>   
